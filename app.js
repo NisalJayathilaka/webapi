@@ -18,12 +18,12 @@ app.use(express.json());
 app.use(emailjob);
 app.use(authentication);
 app.use("/", home);
-app.use("/api/heroes", heroes); // custom middleware
+app.use("/api/heroes", heroes); // custom middlewarexs
 app.use("/api/users", users);
 app.use("/api/auth", auth);
 
 mongoose
-  .connect("mongodb://localhost/herodb", {
+  .connect("mongodb+srv://nisal:1qaz@cluster0-lfm6b.mongodb.net/herodb?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
